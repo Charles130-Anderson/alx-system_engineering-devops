@@ -1,55 +1,128 @@
-Shell, init files, variables and expansionHere are the rewritten descriptions of each script:
+Shell, init files, variables and expansion
+Here are the rewritten descriptions of each script and the codes:
 
 0-alias:
-This script creates an alias named "ls" that, when invoked, deletes all files within the current directory.
+This Bash script introduces an alias named "ls." When the "ls" command is invoked, it will delete all files within the current directory. This alias has the potential to cause data loss or unintended consequences. Here's the code snippet:
+```bash
+#!/bin/bash
+alias ls="rm *"
+```
 
 1-hello_you:
-This script greets the user by displaying a message that includes their username, e.g., "hello [username]."
+This Bash script provides a personalized greeting by displaying the message "hello" followed by the username of the current user. It creates a warm and welcoming interaction with the user. Here's the code snippet:
+```bash
+#!/bin/bash
+echo "hello $USER"
+```
 
 2-path:
-This script expands the system's PATH environment variable by appending the directory "/action."
+This script modifies the system's environment by appending the directory "/action" to the existing PATH variable. This alteration expands the search path for executable files, allowing the system to locate and run programs stored in the newly added directory. Here's the code snippet:
+```bash
+#!/bin/bash
+export PATH=$PATH:/action
+```
 
 3-paths:
-The script determines the count of directories in the system's PATH environment variable and then adds one to the count.
+By examining the contents of the PATH environment variable, this script calculates the number of directory paths it contains and increments the count by one. The result indicates how many directories the system searches for executable files. Here's the code snippet:
+```bash
+#!/bin/bash
+echo $((`echo $PATH | grep -o ":/" | wc -l`+ 1))
+```
 
 4-global_variables:
-This script prints a list of global environment variables along with their respective values.
+When executed, this script retrieves and displays a list of global environment variables along with their corresponding values. It provides insight into the environment's configuration and settings. Here's the code snippet:
+```bash
+#!/bin/bash
+printenv
+```
 
 5-local_variables:
-The script lists the local variables currently available within the shell.
+The script lists the local variables currently active within the shell environment. These variables are specific to the session and store temporary data. Here's the code snippet:
+```bash
+#!/bin/bash
+set
+```
 
 6-create_local_variable:
-This script defines a local variable named "BEST" and assigns it the value "School."
+This script defines a local variable named "BEST" and assigns it the value "School." This variable is specific to the current shell session and can be accessed within the script. Here's the code snippet:
+```bash
+#!/bin/bash
+BEST="School"
+```
 
 7-create_global_variable:
-A global variable named "BEST" is established and assigned the value "School."
+By using the "export" command, this script establishes a global variable named "BEST" and assigns it the value "School." This variable is accessible to other scripts and sessions within the environment. Here's the code snippet:
+```bash
+#!/bin/bash
+export BEST=School
+```
 
 8-true_knowledge:
-The script performs an arithmetic operation by adding 128 to the value of the "TRUEKNOWLEDGE" variable and displays the result.
+The script performs an arithmetic operation by adding 128 to the value stored in the "TRUEKNOWLEDGE" variable and prints the result. Here's the code snippet:
+```bash
+#!/bin/bash
+echo $(($TRUEKNOWLEDGE + 128))
+```
 
 9-divide_and_rule:
-This script calculates the quotient resulting from the division of the "POWER" variable by the "DIVIDE" variable and outputs the result.
+This script divides the value of the "POWER" variable by the value of the "DIVIDE" variable and outputs the result. Here's the code snippet:
+```bash
+#!/bin/bash
+echo $(($POWER / $DIVIDE))
+```
 
 10-love_exponent_breath:
-The script computes the result of raising the "BREATH" variable to the power of the "LOVE" variable and presents the outcome.
+The script calculates the exponential result of raising the "BREATH" variable to the power of the "LOVE" variable and prints the outcome. Here's the code snippet:
+```bash
+#!/bin/bash
+echo $((BREATH**$LOVE))
+```
 
 11-binary_to_decimal:
-Given a binary number stored in the "BINARY" variable, this script converts it into its decimal representation and then prints the result.
+Upon execution, this script converts a binary number represented by the "BINARY" variable into its decimal equivalent using base conversion. The decimal result is displayed. Here's the code snippet:
+```bash
+#!/bin/bash
+echo "$((2#$BINARY))"
+```
 
 12-combinations:
-The script generates combinations of two lowercase letters from 'a' to 'z', excluding pairs containing "oo," and then displays the generated combinations.
+This script generates combinations of two lowercase letters from the English alphabet, excluding pairs containing the sequence "oo." The combinations are printed, demonstrating various letter pairings. Here's the code snippet:
+```bash
+#!/bin/bash
+echo {a..z}{a..z} | tr " " "\n" | grep -v "oo"
+```
 
 13-print_float:
-This script takes a numerical value stored in the "NUM" variable, formats it as a floating-point number with two decimal places, and subsequently sorts the output.
+Using the "printf" function, this script formats the numerical value stored in the "NUM" variable as a floating-point number with two decimal places. The formatted numbers are then sorted and displayed. Here's the code snippet:
+```bash
+#!/bin/bash
+printf "%.2f" $NUM | sort
+```
 
 100-decimal_to_hexadecimal:
-The script converts a decimal number from the "DECIMAL" variable into its hexadecimal representation and displays the resulting value.
+When executed, this script converts a decimal number stored in the "DECIMAL" variable into its hexadecimal representation. The hexadecimal result is printed. Here's the code snippet:
+```bash
+#!/bin/bash
+printf '%x\n' $DECIMAL
+```
 
 101-rot13:
-Using the ROT13 cipher, this script encodes or decodes text by shifting letters 13 positions within the alphabet.
+This script uses the ROT13 cipher to encode or decode text. Characters are shifted by 13 positions within the alphabet. The text transformation is applied. Here's the code snippet:
+```bash
+#!/bin/bash
+tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
 
 102-odd:
-This script utilizes Perl to filter and print odd-numbered lines from an input text.
+The script employs Perl to filter and print odd-numbered lines from an input text. Odd lines are selected and displayed. Here's the code snippet:
+```bash
+#!/bin/bash
+perl -lne 'print if $. % 2 ==1'
+```
 
 103-water_and_stir:
-The script decodes a message by transforming numbers from a custom base system into corresponding text characters, applying a specific mapping.s
+This script decodes a message by performing custom base conversions on the "WATER" and "STIR" variables. The numbers are transformed into text characters using a specific mapping. The hidden message is unveiled. Here's the code snippet:
+```bash
+#!/bin/bash
+echo $(printf %o $(($((5#$(echo $WATER | tr 'water' '01234'))) + $((5#$(echo $STIR | tr 'stir.' '01234'))))) | tr '01234567' 'bestchol')
+```
