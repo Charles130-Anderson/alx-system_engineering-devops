@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script is displaying numbers from 1 to 20, but for the 4th, 9th, and 17th iterations, it displays "Bad luck" from a different country
+
+counter=1
+while [ $counter -le 20 ]
+do
+ case $counter in
+ 4) echo "4"; echo "bad luck from China" ;;
+ 9) echo "9"; echo "bad luck from Japan" ;;
+ 17) echo "17"; echo "bad luck from Italy" ;;
+ *) echo $counter ;;
+ esac
+ ((counter++))
+done
