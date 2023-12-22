@@ -2,7 +2,5 @@
 # Kill the 7-highlander process without using kill or killall
 
 # Find the process ID (PID) of 7-highlander
-pid=$(pgrep -f "7-highlander")
 
-# Terminate the process by sending a SIGTERM signal
-kill -15 "$pid"
+kill -9 =$(pgrep -f "7-highlander")
