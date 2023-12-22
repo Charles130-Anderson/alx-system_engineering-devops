@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Init script to manage manage_my_process
 
 PID_FILE="/var/run/my_process.pid"
