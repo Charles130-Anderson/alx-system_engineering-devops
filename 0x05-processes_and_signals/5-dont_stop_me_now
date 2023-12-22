@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Start a process that runs 4-to_infinity_and_beyond
-./4-to_infinity_and_beyond
+# This script is stopping the 4-to_infinity_and_beyond process
+pkill -f 4-to_infinity_and_beyond
