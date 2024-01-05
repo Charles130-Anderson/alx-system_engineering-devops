@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-
 # The following script uses the 'netstat' command to display active network connections
 # and listening ports along with associated processes.
-
 # Running the 'netstat' command with the '-lp' option.
 # - 'l': Display listening sockets.
 # - 'p': Show the process ID and name for the involved processes.
