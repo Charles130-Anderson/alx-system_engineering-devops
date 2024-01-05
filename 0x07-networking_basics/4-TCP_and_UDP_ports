@@ -1,20 +1,9 @@
 #!/usr/bin/env bash
-# This script displays listening ports along with PID and program name.
 
-# Display active internet connections with listening sockets
-echo "Active Internet connections (only servers)"
-echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
+# The following script uses the 'netstat' command to display active network connections
+# and listening ports along with associated processes.
 
-# Display listening TCP ports
-netstat -tln | awk '/tcp/ {print $1, $4, $NF}' | sed -e '1d' | while read proto local foreign state; do
-    pid=$(lsof -i -n -P | grep "$local" | awk '{print $2}')
-    pname=$(ps -p $pid -o comm=)
-    echo "$proto    -      -    $local                  $foreign                 $state       $pid/$pname"
-done
-
-# Display listening UDP ports
-netstat -uln | awk '/udp/ {print $1, $4, $NF}' | sed -e '1d' | while read proto local foreign state; do
-    pid=$(lsof -i -n -P | grep "$local" | awk '{print $2}')
-    pname=$(ps -p $pid -o comm=)
-    echo "$proto    -      -    $local                  $foreign                 $state       $pid/$pname"
-done
+# Running the 'netstat' command with the '-lp' option.
+# - 'l': Display listening sockets.
+# - 'p': Show the process ID and name for the involved processes.
+netstat -lp
