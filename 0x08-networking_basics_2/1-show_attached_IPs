@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# This script extracts and displays the IP address of the local machine using 'ifconfig'.
-
-# Run the 'ifconfig' command to retrieve information about network interfaces.
-# Use 'grep' with a regular expression to filter and extract the IPv4 address from the output.
-# The '-Eo' options enable extended regex matching and display only the matched portion.
-# The 'cut' command is used to remove the initial characters up to the actual IP address.
-ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | cut -b 11-

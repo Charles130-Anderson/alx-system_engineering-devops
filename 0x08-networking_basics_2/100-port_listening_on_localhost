@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-# This script uses the 'nc' command to set up a simple network listener on localhost and port 98.
-
-# The 'nc' command is invoked with the '-l' option to create a listening socket.
-# 'localhost' specifies that the listener will be bound to the local machine.
-# The port number '98' designates the specific port on which the listener will be active.
-nc -l localhost 98
