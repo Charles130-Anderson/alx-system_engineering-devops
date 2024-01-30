@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This script pings an IP address passed as an argument and checks for proper usage.
+# Check if an IP address is provided as an argument using a regex pattern.
+
+if [[ $1 =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]
+then
+    # If a valid IP address is provided, execute the 'ping' command with '-c 5' to send 5 ICMP echo requests.
+	ping -c 5 "$1"
+else
+    # If the provided argument is not a valid IP address, display a usage message.
+	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+fi
+
