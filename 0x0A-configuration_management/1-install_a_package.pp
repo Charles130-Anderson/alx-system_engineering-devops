@@ -1,4 +1,4 @@
-#!/usr/bin/puppet
+#!/usr/bin/pup
 
 # Puppet resource to ensure the package is installed
 package { 'flask':
