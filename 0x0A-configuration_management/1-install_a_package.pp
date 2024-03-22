@@ -5,8 +5,3 @@ package { 'Flask':
   provider => 'pip3',
   require  => Package['python3-pip'],
 }
-
-# Ensuring python3-pip package is installed
-package { 'python3-pip':
-  ensure => 'installed',
-}
