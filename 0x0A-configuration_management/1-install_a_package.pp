@@ -1,6 +1,7 @@
-#!/usr/bin/pup
+#!/usr/bin/puppet
+
 # Puppet resource to ensure the package is installed
-package {'flask':
+package { 'flask':
   ensure   => '2.1.0',
-  provider => 'pip3'
+  provider => 'pip3',
 }
