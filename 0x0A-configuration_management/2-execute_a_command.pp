@@ -3,4 +3,5 @@
 exec { 'killmenow':
   command     => 'pkill killmenow',
   refreshonly => true,
+  path        => 'usr/bin'
 }
