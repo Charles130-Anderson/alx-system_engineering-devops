@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
-# Creating an RSA and SSH pair on the Web terminal-sandbox and locally
 
-ssh-keygen -t rsa -b 4096 -p betty -f school
+# Generating RSA key pair without passphrase
+ssh-keygen -t rsa -b 4096 -f school
+
+# Adding passphrase to the private key
+ssh-keygen -p -P '' -N 'betty' -f school
