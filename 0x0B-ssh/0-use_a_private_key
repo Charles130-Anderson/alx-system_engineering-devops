@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Shebang environment bash.
+# Connecting to my server using the private key.
+ssh ubuntu -i ~/.ssh/school
