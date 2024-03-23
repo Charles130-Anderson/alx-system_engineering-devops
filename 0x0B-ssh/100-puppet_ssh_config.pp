@@ -5,5 +5,6 @@ file_line { 'etc/ssh/ssh_config':
              ensure => present,
 content =>"
         host* IdentifyFile ~/.ssh/school
-        passwordAuthentication no",
+        passwordAuthentication no
+	",
 }
