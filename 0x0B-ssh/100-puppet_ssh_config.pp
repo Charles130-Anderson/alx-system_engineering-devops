@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Define a Puppet class to manage SSH configuration
 class ssh_config {
   # Ensure the SSH configuration file exists
