@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Creating an RSA and SSH pair on the Web terminal-sandbox and locally 
+# Creating an RSA and SSH pair on the Web terminal-sandbox and locally
+
 ssh-keygen -t rsa -b 4096 -p betty -f school
