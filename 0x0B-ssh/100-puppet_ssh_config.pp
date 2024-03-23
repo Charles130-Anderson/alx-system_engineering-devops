@@ -2,6 +2,8 @@
 # using puppet to make changes to the config file
 
 file_line { 'etc/ssh/ssh_config':
-  ensure  => present,
-  content => "    Host *\n    IdentifyFile ~/.ssh/school\n    PasswordAuthentication no\n",
+             ensure => present,
+content =>"
+        host* IdentifyFile ~/.ssh/school
+        passwordAuthentication no",
 }
