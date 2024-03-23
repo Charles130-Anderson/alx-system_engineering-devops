@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Creating an RSA and SSH pair on the Web terminal-sandbox
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/school
