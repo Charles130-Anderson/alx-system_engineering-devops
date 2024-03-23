@@ -5,7 +5,7 @@ file { '/etc/ssh/ssh_config':
     ensure  => present,
     # Set the content of the file
     content => "
-      # SSH client configuration
+      # SSH client configuration to use private key
       Host *
         IdentityFile ~/.ssh/school
         PasswordAuthentication no
