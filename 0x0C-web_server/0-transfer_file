@@ -9,7 +9,7 @@ fi
 file_path=$1
 ip_adress=$2
 username=$3
-path_t_ssh_key=$4
+path_to_ssh_key=$4
 #disabbling the strict hostkey checking
 scp -o "StrictHostKeyChecking=no" -i "$path_to_ssh_key" "$file_path" "$username@$ip_adress:~/"
 #Confirming if the transfer is successful
