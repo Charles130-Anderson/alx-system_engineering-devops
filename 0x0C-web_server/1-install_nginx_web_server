@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# comands For installing nginx
+# commands For installing nginx
 
 sudo apt-get update
 sudo apt-get install nginx
