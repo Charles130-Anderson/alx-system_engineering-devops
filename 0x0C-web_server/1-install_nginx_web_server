@@ -3,7 +3,7 @@
 
 sudo apt-get update
 sudo apt-get install nginx
-sudo iufw 'Nginx HTTP'
+sudo ufw 'Nginx HTTP'
 sudo nginx -t
 sudo service nginx reload
 sudo service nginx restart
