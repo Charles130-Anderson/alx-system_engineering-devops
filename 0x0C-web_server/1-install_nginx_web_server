@@ -1,20 +1,8 @@
 #!/usr/bin/env bash
-# This script installs Nginx and creates a simple HTML file.
+# Installing and handling ngix web server 
 
-# Update package list
 sudo apt-get -y update
-
-# Install Nginx
-sudo apt-get install nginx
-
-# Configure firewall to allow Nginx HTTP traffic
-sudo ufw allow 'Nginx HTTP'
-
-# Check Nginx configuration
-sudo nginx -t
-
-# Restart Nginx service to apply changes
+sudo apt-get install -y nginx
+ufw allow 'Nginx HTTP'
+echo "Hello World!" > /var/www/html/index.html
 sudo service nginx restart
-
-# Create a simple HTML file with "Hello world!" content
-echo "Hello world!" | sudo tee /var/www/html/index.html
