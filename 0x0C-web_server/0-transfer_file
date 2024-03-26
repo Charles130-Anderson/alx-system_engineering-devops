@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # Check parameters for transferring the files
-if [ $# -lt 4 ]; then
+if [ $# -lt 4 ];
+then
     echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME"
     exit 1
 fi
