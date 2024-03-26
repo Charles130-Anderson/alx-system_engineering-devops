@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 # commands for installing nginx
 
+# Update package list
 sudo apt-get -y update
+
+# Install nginx with automatic confirmation
 sudo apt-get install -y nginx
+
+# Allow HTTP traffic for Nginx
 ufw allow 'Nginx HTTP'
+
+# Create a simple HTML file with "Hello World!" content
 echo "Hello World!" > /var/www/html/index.html
+
+# Restart nginx service to apply changes
 sudo service nginx restart
