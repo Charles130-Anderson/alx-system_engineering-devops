@@ -1,8 +1,8 @@
-# Puppet autiomation
+# Puppet automation
 package { 'nginx':
-  ensure  => installed,
+  ensure => installed,
 }
-file {'install':
+file { 'install':
   ensure => 'present',
   path   => '/etc/nginx/sites-enabled/default',
   after  => 'listen 80 default_server',
