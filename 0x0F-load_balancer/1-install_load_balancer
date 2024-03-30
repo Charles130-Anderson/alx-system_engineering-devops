@@ -21,5 +21,8 @@ EOL
 # Enable HAProxy service to be managed via init script
 sudo systemctl enable haproxy
 
+# Testing the HAproxy configuration file
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+
 # Restart HAProxy service
 sudo systemctl restart haproxy
