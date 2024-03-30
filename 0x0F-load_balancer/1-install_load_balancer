@@ -1,10 +1,17 @@
 #!/usr/bin/env bash
 # Installing and configuring HAProxy
+# Develop a script for setting up and adjusting HAProxy on the lb-01 server.
+# Set up HAProxy to direct traffic to web-01 and web-02 servers.
+# Distribute incoming requests evenly using a round-robin algorithm.
+# Ensure HAProxy can be controlled through an init script.
+# Install and set up HAProxy on the lb-01 server.
+# Update package index and install HAProxy
 sudo apt-get -y update
 sudo apt-get -y install haproxy
 
 # Edit configuration file
-server_config="\
+server_config=\
+"
 frontend andy-frontend
     bind *:80
     mode http
@@ -22,3 +29,4 @@ echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
 # Restart HAProxy service
 sudo service haproxy restart
+
