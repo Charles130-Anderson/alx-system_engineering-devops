@@ -9,7 +9,6 @@ domain_info() {
 }
 
 if [ "$#" -eq 1 ]; then
-else
     print_domain_info "$1" "www"
     print_domain_info "$1" "lb-01"
     print_domain_info "$1" "web-01"
