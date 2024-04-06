@@ -1,47 +1,18 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# This function displays details about a specific subdomain
-show_subdomain_info() {
+# Function to print domain information
+print_domain_info() {
     local domain="$1"
     local subdomain="$2"
-
-    # Query DNS records for the given subdomain
-    local dns_info
-    dns_info=$(dig "$subdomain.$domain" | awk '/ANSWER SECTION/ {getline; print}')
-
-    # Extract relevant details from DNS information
-    local record_type
-    record_type=$(echo "$dns_info" | awk '{print $4}')
-    local destination
-    destination=$(echo "$dns_info" | awk '{print $5}')
-
-    # Output the information in the specified format
-    echo "The subdomain $subdomain has a $record_type record and points to $destination"
+    dig "$subdomain.$domain" | grep -A1 'ANSWER SECTION:' | sed -r "s/$subdomain\.$domain/$subdomain/g" | awk -F" " ' NR==2 { print "The subdomain " $1 " is a " $4 " record and points to " $5 }'
 }
 
-# This function displays details about default subdomains
-show_default_subdomains_info() {
-    local domain="$1"
-    local default_subdomains=("www" "lb-01" "web-01" "web-02")
-    for subdomain in "${default_subdomains[@]}"
-    do
-        show_subdomain_info "$domain" "$subdomain"
-    done
-}
-
-# Main script
-if [ $# -eq 0 ]; then
-    echo "Error: No arguments provided. Please specify a domain name."
-    exit 1
-fi
-
-domain="$1"
-subdomain="$2"
-
-# If no subdomain is specified, display details for default subdomains
-if [ -z "$subdomain" ]; then
-    show_default_subdomains_info "$domain"
+# Check arguments and call print_domain_info accordingly
+if [ "$#" -eq 2 ]; then
+    print_domain_info "$1" "$2"
 else
-    # Display details for the specified subdomain
-    show_subdomain_info "$domain" "$subdomain"
+    print_domain_info "$1" "www"
+    print_domain_info "$1" "lb-01"
+    print_domain_info "$1" "web-01"
+    print_domain_info "$1" "web-02"
 fi
