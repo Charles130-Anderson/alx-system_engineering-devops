@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
 # Function to print domain information
+
 print_domain_subdomain() {
     local domain="$1"
     local subdomain="$2"
@@ -11,7 +11,6 @@ print_domain_subdomain() {
         | awk -F" " 'NR==2 { print "The subdomain " $1 " is a " $4 " record and points to " $5 }'
 }
 
-# Check arguments and call print_domain_subdomain accordingly
 if [ "$#" -eq 2 ]; then
     print_domain_subdomain "$2.$1" "$2"
 else
