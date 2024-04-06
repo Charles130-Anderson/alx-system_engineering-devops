@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Function to print domain information
 
-domain_info() {
+print_domain_info() {
     local domain="$1"
     local subdomain="$2"
      line=$(dig "$subdomain"."$domain" | awk '/ANSWER SECTION:/ {getline; print; getline; print}')
