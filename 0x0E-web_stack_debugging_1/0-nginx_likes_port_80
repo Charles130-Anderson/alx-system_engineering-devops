@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # This script configures Nginx to listen on port 80
 
+# Listening to port 80
 echo "server { listen 80; }" | sudo tee /etc/nginx/sites-available/default > /dev/null
 
 # Create a symbolic link to enable the default site
