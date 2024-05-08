@@ -1,4 +1,4 @@
-# trace_is_your_friend.pp fixing typo
+# Puppet for a fixing typo
 
 exec { 'fix-apache-error':
         command  => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
