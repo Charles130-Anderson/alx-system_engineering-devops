@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-import requests
 """Contains recurse function"""
+import requests
 
 
 def recurse(subreddit, hot_list=[], after=None):
     """A route that returns recurse"""
     req = requests.get(
         "https://www.reddit.com/r/{}/hot.json".format(subreddit),
-        headers={"Anderson"},
+        headers={"User-Agent": "Custom"},
         params={"after": after},
     )
     if req.status_code == 200:
