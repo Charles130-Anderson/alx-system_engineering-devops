@@ -106,7 +106,7 @@ ubuntu@444-web-01:~$
 
 4. [Setup a Primary-Replica infrastructure using MySQL] - [4-mysql_configuration_primary](./4-mysql_configuration_primary), [4-mysql_configuration_replica](./4-mysql_configuration_replica) :
 
-[<img src="./double_server_power.gif" alt="server" width=50%>](https://github.com/AyomideKayode/alx-system_engineering-devops/raw/master/0x14-mysql/double_server_power.gif)
+![GIF](https://github.com/AyomideKayode/alx-system_engineering-devops/blob/master/0x14-mysql/double_server_power.gif)
 
 Having a replica member on for your MySQL database has 2 advantages:
 
