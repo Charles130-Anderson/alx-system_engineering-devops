@@ -1,6 +1,7 @@
 # Project: 0x1A. Application server
 
-![application_server-img](./technicals/application_server.jpg)
+![image](https://github.com/Charles130-Anderson/alx-system_engineering-devops/assets/138807102/0fce5479-c066-42d0-8027-aafd7e9fa7ba)
+
 
 ## Background Context
 
