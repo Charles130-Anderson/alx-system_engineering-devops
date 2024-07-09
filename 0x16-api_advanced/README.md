@@ -1,6 +1,6 @@
 # Project: 0x16. API advanced
 
-![api_guide](./api_guide.png)
+![image](https://github.com/Charles130-Anderson/alx-system_engineering-devops/assets/138807102/3f9cd606-d213-48a3-87d5-534952e35e85)
 
 ## Background Context
 
