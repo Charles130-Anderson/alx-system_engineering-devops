@@ -1,6 +1,7 @@
 # Project: 0x14. MySQL
 
-![sql_map](./my_SQL.png)
+![image](https://github.com/Charles130-Anderson/alx-system_engineering-devops/assets/138807102/95401a2a-7127-493f-aab6-42374d1cd5ce)
+
 
 ## Resources
 
@@ -105,7 +106,7 @@ ubuntu@444-web-01:~$
 
 4. [Setup a Primary-Replica infrastructure using MySQL] - [4-mysql_configuration_primary](./4-mysql_configuration_primary), [4-mysql_configuration_replica](./4-mysql_configuration_replica) :
 
-<img src="./double_server_power.gif" alt="server" width=50%>
+[<img src="./double_server_power.gif" alt="server" width=50%>](https://github.com/AyomideKayode/alx-system_engineering-devops/raw/master/0x14-mysql/double_server_power.gif)
 
 Having a replica member on for your MySQL database has 2 advantages:
 
@@ -302,9 +303,3 @@ ubuntu@03-web-01:~$
     - [Shellcheck](https://github.com/koalaman/shellcheck)
 
 ---
-
-## Author
-
-- **<em>Website</em>** - [Ayomide Kayode](https://github.com/AyomideKayode)
-- **<em>ALX Software Engineering Program</em>** - [ALX_AFRICA](https://www.alxafrica.com/programmes/)
-- **<em>Twitter</em>** - [@kazzy_wiz](https://www.twitter.com/kazzy_wiz)
