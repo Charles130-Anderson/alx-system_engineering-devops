@@ -202,9 +202,3 @@ holberton@079b7269ec1b:~$
 - Style guidelines: Puppet-lint
 
 ---
-
-## Author
-
-- _Website_ - [Ayomide Kayode](https://github.com/AyomideKayode)
-- _ALX Software Engineering Program_ - [ALX_AFRICA](https://www.alxafrica.com/programmes/)
-- _Twitter_ - [@kazzy_wiz](https://www.twitter.com/kazzy_wiz)
