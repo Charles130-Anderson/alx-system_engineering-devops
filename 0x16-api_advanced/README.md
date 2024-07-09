@@ -149,8 +149,3 @@ Disclaimer: number presented in this example cannot be accurate now - Reddit is 
 
 ---
 
-## Author
-
-- _Website_ - [Ayomide Kayode](https://github.com/AyomideKayode)
-- _ALX Software Engineering Program_ - [ALX_AFRICA](https://www.alxafrica.com/programmes/)
-- _Twitter_ - [@kazzy_wiz](https://www.twitter.com/kazzy_wiz)
