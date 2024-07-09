@@ -6,7 +6,7 @@
 
 - **Your Servers without a firewall...**
 
-![GIF](https://github.com/AyomideKayode/alx-system_engineering-devops/blob/master/0x13-firewall/server_without_firewall.gif.gif)
+![GIF](https://github.com/AyomideKayode/alx-system_engineering-devops/blob/master/0x13-firewall/server_without_firewall.gif)
 
 ## Resources
 
